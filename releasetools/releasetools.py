@@ -50,6 +50,15 @@ def OTA_InstallEnd(info):
   AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/by-name/vbmeta")
 
+
+  info.script.AppendExtra('if getprop("ro.twrp.boot") == "1" then')
+  info.script.AppendExtra('ui_print("Detected TWRP, removing encryption");')
+  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/platform/13d60000.ufs/by-name/vendor", "/vendor");')
+  info.script.AppendExtra('run_program("/sbin/sh", "-c", "mv /vendor/etc/fstab_noenc /vendor/etc/fstab.exynos9820");')
+  info.script.AppendExtra('run_program("/sbin/sh", "-c", "cp /vendor/etc/fstab.exynos9820 /vendor/etc/fstab.exynos9825");')
+  info.script.AppendExtra('unmount("/vendor");')
+  info.script.AppendExtra('endif;')
+
   if "RADIO/models" in info.input_zip.namelist():
     modelsIncluded = []
     for model in info.input_zip.read("RADIO/models").decode('utf-8').splitlines():
