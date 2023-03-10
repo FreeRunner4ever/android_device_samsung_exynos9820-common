@@ -341,5 +341,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
-# Boot Animation
-TARGET_BOOTANIMATION := $(shell pwd)/device/samsung/exynos9820-common/prebuilts/bootanimation/bootanimation.zip
