@@ -344,3 +344,6 @@ include vendor/gapps/arm64/arm64-vendor.mk
 
 # Boot Animation
 TARGET_BOOTANIMATION := $(shell pwd)/device/samsung/exynos9820-common/prebuilts/bootanimation/bootanimation.zip
+
+# Patches
+PATCH := $(shell ($(LOCAL_PATH)/clang_patch.sh))
