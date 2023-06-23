@@ -62,5 +62,8 @@ ro.vendor.cscsupported=1
 ## SoC
 ro.soc.manufacturer=Samsung
 
+# HWUI
+ro.hwui.render_ahead=20
+
 ## Wi-Fi Direct
 wifi.direct.interface=p2p-dev-wlan0
