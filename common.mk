@@ -107,6 +107,9 @@ PRODUCT_PACKAGES += \
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor:64
+    
+PRODUCT_PACKAGES += \
+    GCamGo    
 
 # Graphics
 # Device uses high-density artwork where available
