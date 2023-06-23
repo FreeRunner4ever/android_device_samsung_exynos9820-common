@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.camera.provider@2.5-service.samsung"
+#define LOG_TAG "android.hardware.camera.provider@2.6-service.samsung"
 
-#include <android/hardware/camera/provider/2.5/ICameraProvider.h>
+#include <android/hardware/camera/provider/2.6/ICameraProvider.h>
 #include <binder/ProcessState.h>
 #include <hidl/HidlLazyUtils.h>
 #include <hidl/HidlTransportSupport.h>
@@ -32,7 +32,7 @@ int main()
 {
     using namespace android::hardware::camera::provider::V2_5::implementation;
 
-    ALOGI("CameraProvider@2.5 legacy service is starting.");
+    ALOGI("CameraProvider@2.6 legacy service is starting.");
 
     ::android::hardware::configureRpcThreadpool(/*threads*/ HWBINDER_THREAD_COUNT, /*willJoin*/ true);
 
