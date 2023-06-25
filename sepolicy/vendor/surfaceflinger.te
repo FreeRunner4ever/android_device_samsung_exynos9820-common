@@ -1,0 +1,1 @@
+allow surfaceflinger sysfs:dir {read};
