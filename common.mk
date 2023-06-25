@@ -346,10 +346,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
     
 TARGET_BOOT_ANIMATION_RES := 1440  
-TARGET_ENABLE_BLUR := true    
+TARGET_ENABLE_BLUR := true
+TARGET_FACE_UNLOCK_SUPPORTED := true    
 WITH_GMS := true
 CHERISH_BUILD_TYPE := OFFICIAL
-
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.cherish.maintainer=FrEeRuNnEr4EvEr
     
