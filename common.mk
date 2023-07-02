@@ -350,7 +350,7 @@ TARGET_ENABLE_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := true    
 WITH_GMS := true
 CHERISH_BUILD_TYPE := OFFICIAL
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true 
+PRODUCT_USE_SCUDO := true
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.cherish.maintainer=FrEeRuNnEr4EvEr
-    
-PRODUCT_USE_SCUDO := true   
+    ro.cherish.maintainer=FrEeRuNnEr4EvEr  
