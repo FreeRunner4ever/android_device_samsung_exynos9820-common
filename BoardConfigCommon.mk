@@ -80,7 +80,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos9820
-TARGET_KERNEL_CLANG_VERSION := hyper-x-clang
 
 ## Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
@@ -89,7 +88,7 @@ TARGET_KEYMASTER_VARIANT := samsung
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/device_framework_matrix.xml \
-    vendor/banana/config/device_framework_matrix.xml
+    vendor/aosp/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
@@ -141,7 +140,7 @@ VENDOR_SECURITY_PATCH := 2022-07-01
 
 ## SELinux
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
-include device/banana/sepolicy/exynos/sepolicy.mk
+include device/aosp/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
